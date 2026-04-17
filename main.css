@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: line grey;
+}
 header{
      position: fixed;
     left: 0;
@@ -50,15 +53,39 @@ header .container{
 }
 
 
+.section2{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 77%;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+     gap: 40px;
+     border: 1px solid silver;
+     border-radius: 8px;
+     margin-bottom: 50px;
+}
 #input{
-    width: 57%;
+    width: 90%;
     padding: 10px;
      border-radius: 8px;
     border-color: rgb(168, 149, 101);
     box-shadow: 3px 3px 3px 3px rgb(145, 149, 149);
-     transition: all 0.7s ease-in-out;
- 
 }
-#input:hover{
-    transform: scale(1.1);
+
+.tugmacha{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background: #FF7010;
+    border: none;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px; 
+    color: whitesmoke;
 }
