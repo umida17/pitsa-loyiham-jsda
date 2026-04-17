@@ -1,6 +1,7 @@
 let  ichimlik =document.getElementById("napitaData");
 let container = document.getElementById("container")
 let searchInput =document.getElementById("input")
+let menyu = document.getElementById("menyular")
 
 let napitaData = [
     {id: 1, img: "./img2/Fire.png", name: "Акции"},
@@ -51,3 +52,6 @@ searchInput.addEventListener("input", function(e) {
 
     renderData(filterData); 
 });
+
+
+

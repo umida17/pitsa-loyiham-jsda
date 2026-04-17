@@ -69,12 +69,23 @@ form{
      border-radius: 8px;
      margin-bottom: 50px;
 }
+ .adres{
+ font-weight: 400;
+ width: 220px;
+ font-size: 18px;
+ line-height: 24px;
+letter-spacing: 0px;
+ color: #191919;
+}
+label{
+    width: 60%;
+    padding: 5px;
+    border: 1px solid silver;
+    border-radius: 8px;
+}
 #input{
-    width: 90%;
-    padding: 10px;
-     border-radius: 8px;
-    border-color: rgb(168, 149, 101);
-    box-shadow: 3px 3px 3px 3px rgb(145, 149, 149);
+     border:  none;
+    padding: 5px;
 }
 
 .tugmacha{
@@ -89,6 +100,8 @@ form{
     line-height: 22px; 
     color: whitesmoke;
 }
+
+
 
 
 .pitsa{
