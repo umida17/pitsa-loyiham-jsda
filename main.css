@@ -36,3 +36,8 @@ header .container{
     width: 30px;
     height: 30px;
 }
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
