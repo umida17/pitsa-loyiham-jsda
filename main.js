@@ -20,17 +20,20 @@ function rendernapitaData(dataList) {
         <button class="button" style="
             background: ${cat.color};
             border: none;
-            color: white; 
+            color:  red; 
             width: 100px;
-            height: 100px;
-             padding: 10px 15px;
+            height: 90px;
+            flex-direction: column;
+             padding: 15px ;
             margin: 5px;
             border-radius: 6px;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
+            gap: 15px;
         ">
-            <img src="${cat.img}" width="20" style="margin-right: 8px;">
+            <img class=
+            'img' src="${cat.img}" width="20" style="margin-right: 8px;">
             ${cat.name}
         </button>
     `).join("");
