@@ -89,3 +89,11 @@ form{
     line-height: 22px; 
     color: whitesmoke;
 }
+
+
+.pitsa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
