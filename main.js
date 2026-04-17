@@ -1,6 +1,6 @@
 let  ichimlik =document.getElementById("napitaData");
 let container = document.getElementById("container")
-
+let searchInput =document.getElementById("input")
 
 let napitaData = [
     {id: 1, img: "./img2/Fire.png", name: "Акции"},
@@ -39,3 +39,15 @@ function rendernapitaData(dataList) {
     `).join("");
 }
 rendernapitaData(napitaData);
+
+
+
+searchInput.addEventListener("input", function(e) {
+    let malumotlar= e.target.value.toLowerCase();
+
+    const filterData = datas.filter(user => 
+        user.name.toLowerCase().includes(malumotlar)
+    );
+
+    renderData(filterData); 
+});

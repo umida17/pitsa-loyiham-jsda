@@ -48,3 +48,17 @@ header .container{
     margin-top: 50px;
     margin-bottom: 40px;
 }
+
+
+#input{
+    width: 57%;
+    padding: 10px;
+     border-radius: 8px;
+    border-color: rgb(168, 149, 101);
+    box-shadow: 3px 3px 3px 3px rgb(145, 149, 149);
+     transition: all 0.7s ease-in-out;
+ 
+}
+#input:hover{
+    transform: scale(1.1);
+}
