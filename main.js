@@ -15,19 +15,24 @@ let napitaData = [
 ]
 
 
-function rendernapitaData(napitaData) {
-    napitaDataContainer.innerHTML = napitaData.map(cat => `
+function rendernapitaData(dataList) {
+     ichimlik.innerHTML = dataList.map(cat => `
         <button class="button" style="
-            background:${cat.color};
-            border:none;
-            color:blue;
-            padding:10px 15px;
-            border-radius:6px;
-            cursor:pointer;
+            background: ${cat.color};
+            border: none;
+            color: white; 
+            width: 100px;
+            height: 100px;
+             padding: 10px 15px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
         ">
+            <img src="${cat.img}" width="20" style="margin-right: 8px;">
             ${cat.name}
         </button>
     `).join("");
 }
-
 rendernapitaData(napitaData);
