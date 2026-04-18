@@ -143,3 +143,21 @@ label{
     width: 240px;
     padding-left: 20px;
 }
+
+.chili{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    padding-left: 20px;
+}
+
+.sir{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: #191919;
+    padding-left: 20px;
+    padding-right: 17px;
+}
