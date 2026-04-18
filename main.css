@@ -161,3 +161,8 @@ label{
     padding-left: 20px;
     padding-right: 17px;
 }
+
+
+.price{
+    display: flex;
+}
