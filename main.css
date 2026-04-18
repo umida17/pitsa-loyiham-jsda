@@ -125,3 +125,19 @@ label{
     justify-content: space-between;
     margin-bottom: 40px;
 }
+
+.new{
+    width: 70px;
+    height: 30px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.peperoniy{
+    width: 280px;
+    padding-top: 30px;
+}
