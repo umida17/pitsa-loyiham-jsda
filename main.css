@@ -111,5 +111,9 @@ label{
 
 
 .card{
-    
+    width: 300px;
+    height: 480px;
+    border: 2px solid #F0F0F0;
+    background: #FFFFFF;
+
 }
