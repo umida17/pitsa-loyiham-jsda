@@ -112,10 +112,9 @@ label{
 
 
 .card{
-    width: 300px;
+    width: 270px;
     height: 480px;
     border: 2px solid #F0F0F0;
-    background: #FFFFFF;
     border-radius: 10px;
     padding-top: 10px;
 
@@ -136,11 +135,11 @@ label{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-top: 20px;
-    z-index: 9999;
+    position: relative;
+    top: 20px;
 }
 
 .peperoniy{
     width: 240px;
-    padding-left: 25px;
-    padding-top: 30px;
+    padding-left: 20px;
 }
