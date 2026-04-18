@@ -55,3 +55,31 @@ searchInput.addEventListener("input", function(e) {
 
 
 
+
+
+ let quantities = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; 
+
+function updateUI(index) {
+   let element = document.getElementById("qty-" + index);
+  if (element) {
+    element.innerText = quantities[index];
+  }
+}
+
+function increment(index) {
+  quantities[index]++;  
+  updateUI(index);
+}
+
+function decrement(index) {
+  if (quantities[index] > 1) {
+    quantities[index]--;
+    updateUI(index);
+  }
+}
+
+function addToCart(index) {
+  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona");
+}
+
+
