@@ -56,18 +56,25 @@ searchInput.addEventListener("input", function(e) {
 
 
 
+let quantities = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
- let quantities = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; 
+let basePrices = [399, 399, 399, 399, 399, 399, 399, 399, 399, 399];
 
 function updateUI(index) {
-   let element = document.getElementById("qty-" + index);
-  if (element) {
-    element.innerText = quantities[index];
+  let qtyElement = document.getElementById("qty-" + index);
+  let priceElement = document.getElementById("price-" + index);
+
+  if (qtyElement && priceElement) {
+    qtyElement.innerText = quantities[index];
+
+    let total = quantities[index] * basePrices[index];
+
+    priceElement.innerText = "от " + total + " ₽";
   }
 }
 
 function increment(index) {
-  quantities[index]++;  
+  quantities[index]++;
   updateUI(index);
 }
 
@@ -79,7 +86,8 @@ function decrement(index) {
 }
 
 function addToCart(index) {
-  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona");
+  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona, narxi: " 
+        + (quantities[index] * basePrices[index]) + " ₽");
 }
 
 
