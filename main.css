@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    background: line grey;
+    background: line rgb(108, 108, 108);
 }
 header{
      position: fixed;
@@ -116,4 +117,11 @@ label{
     border: 2px solid #F0F0F0;
     background: #FFFFFF;
 
+}
+
+.menyular{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
