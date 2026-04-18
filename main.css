@@ -113,7 +113,7 @@ label{
 
 .card{
     width: 270px;
-    height: 480px;
+    height: 405px;
     border: 2px solid #F0F0F0;
     border-radius: 10px;
     padding-top: 10px;
@@ -204,5 +204,5 @@ text-align: right;
     line-height: 22px;
     letter-spacing: 0px;
     text-align: center;
-
+     border-radius: 4px;
 }
