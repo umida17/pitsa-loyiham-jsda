@@ -53,30 +53,33 @@ searchInput.addEventListener("input", function(e) {
     renderData(filterData); 
 });
 
-let quantities = [];
 
-// har bir mahsulot narxi
-let basePrices = {
-  3: 399,
-  4: 549
+
+
+let quantities = {
+  3: 1,
+  4: 1,
+  5: 1,
+  6: 1
 };
 
-// boshlang‘ich quantity
-quantities[3] = 1;
-quantities[4] = 1;
+let basePrices = {
+  3: 399,
+  4: 549,
+  5: 249,
+  6: 630
+};
 
 function updateUI(index) {
-  let qtyElement = document.getElementById("qty-" + index);
-  let priceElement = document.getElementById("price-" + index);
+  let qty = document.getElementById("qty-" + index);
+  let price = document.getElementById("price-" + index);
 
-  if (!qtyElement || !priceElement) return;
+  if (!qty || !price) return;
 
-  // qty
-  qtyElement.innerText = quantities[index].toString().padStart(2, '0');
+  qty.innerText = quantities[index].toString().padStart(2, "0");
 
-  // price
-  let total = quantities[index] * basePrices[index];
-  priceElement.innerText = "от " + total + " ₽";
+  price.innerText =
+    "от " + (quantities[index] * basePrices[index]) + " ₽";
 }
 
 function increment(index) {
@@ -93,9 +96,8 @@ function decrement(index) {
 
 function addToCart(index) {
   alert(
-    "Mahsulot: " +
     quantities[index] +
-    " dona | Narxi: " +
+    " dona | " +
     (quantities[index] * basePrices[index]) +
     " ₽"
   );
