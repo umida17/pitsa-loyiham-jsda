@@ -67,20 +67,20 @@ header .container{
     justify-content: center;
 }
 form{
-    width: 65%;
+    width: 60%;
     height: 60px;
     padding: 15px;
     display: flex;
     align-items: center;
-     gap: 40px;
+     gap: 30px;
      border: 1px solid silver;
      border-radius: 8px;
      margin-bottom: 50px;
 }
  .adres{
  font-weight: 400;
- width: 220px;
- font-size: 18px;
+ width: 200px;
+ font-size: 14px;
  line-height: 24px;
 letter-spacing: 0px;
  color: #191919;
@@ -90,21 +90,22 @@ label{
     padding: 5px;
     border: 1px solid silver;
     border-radius: 8px;
-}
+ }
 #input{
      border:  none;
     padding: 5px;
+    font-size: 12px;
 }
 
 .tugmacha{
-    width: 150px;
+    width: 130px;
     height: 40px;
     text-align: center;
     background: #FF7010;
     border: none;
     border-radius: 8px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px; 
     color: whitesmoke;
 }
@@ -234,6 +235,12 @@ text-align: right;
     background: white;
  }
 
+ .button:hover{
+background: rgb(163, 162, 162);
+    transform: translateY(10px);
+   
+ }
+
 
  .sushi{
     display: flex;
@@ -309,4 +316,287 @@ text-align: right;
        width: 92%;
     margin-top: 8px;
     padding-left: 20px;
+ }
+
+
+ .chili2{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+ }
+
+
+ .napi2{
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 30px;
+ }
+
+
+ .sous2{
+      width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+
+ }
+
+ .moskov{
+    width: 730px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+ }
+
+ .dastaf{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    color: #191919;
+    padding-bottom: 16px;
+ }
+
+
+ .hohish{
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 19px;
+      margin-bottom: 18px;
+      color: #7e7c7c;
+ }
+
+ .zakaz{
+    font-weight: 400;
+     font-size: 16px;
+     line-height: 19px;
+      margin-bottom: 8px;
+      color: #dcdcdc;
+ }
+
+ .domino{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: #c1c0c0;
+    margin-bottom: 20px;
+ }
+
+
+ .pakazat{
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 20px;
+    letter-spacing: 0px;
+    color: #FF7010;
+    text-decoration: none;
+ }
+
+
+ .footer{
+    border: 4px solid #F0F0F0;
+    height: 262px;
+ }
+ .finish{
+    display: flex;
+     justify-content: center;
+     gap: 50px;
+    margin-top: 40px;
+ }
+
+ .kuda{
+    width: 251px;
+ }
+ .kuda-img{
+    margin-bottom: 100px;
+ }
+
+ .kuda-pitsa{
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 20px;
+    letter-spacing: 0px;
+    color: #191919;
+ }
+
+
+ .garantiya{
+    width: 245px;
+  }
+
+ .garantiya-pitsasi{
+     font-weight: 600;
+     font-size: 20px;
+     line-height: 28px;
+      color: #191919;
+      margin-bottom: 22px;
+ }
+
+
+ .grant{
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 22px;
+    letter-spacing: 0px;
+    color: #191919;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+     padding: 4px;
+ }
+
+
+ .yordam{
+    width: 132px;
+ }
+
+ .pomow{
+     font-weight: 600;
+     font-size: 20px;
+     line-height: 28px;
+      color: #191919;
+      margin-bottom: 22px;
+ }
+
+ .rest{
+    font-weight: 400;
+     font-size: 16px;
+     line-height: 22px;
+    letter-spacing: 0px;
+    color: #191919;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+ }
+
+ .kontakt{
+    width: 299px;
+ }
+
+ .manzil{
+       font-weight: 600;
+     font-size: 20px;
+     line-height: 28px;
+      color: #191919;
+      margin-bottom: 22px;
+ }
+
+ .aloqa{
+    font-weight: 400;
+     font-size: 16px;
+     line-height: 22px;
+    letter-spacing: 0px;
+    color: #191919;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+ }
+
+ .Location{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+ }
+
+ .taqmoq{
+    font-weight: 400;
+     font-size: 16px;
+     line-height: 22px;
+    letter-spacing: 0px;
+    color: #191919;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px;
+ }
+
+
+
+
+ @media(max-width:950px){
+    form{
+        width: 70%;
+    }
+    label{
+        width: 50%;
+    }
+    .adres{
+        width: 200px;
+        font-size: 13px;
+    }
+ }
+
+
+  @media(max-width:850px){
+    form{
+        width: 70%;
+    }
+    label{
+        width: 40%;
+        display: flex;
+        gap: 12px;
+    }
+    .adres{
+        width: 220px;
+        font-size: 13px;
+    }
+    .footer{
+        height: 100%;
+    }
+    .finish{
+        flex-wrap: wrap;
+    }
+    .moskov{
+        width: 550px;
+    }
+ }
+
+
+  @media(max-width:760px){
+    form{
+        width: 90%;
+    }
+   label{
+        width: 40%;
+        display: flex;
+        gap: 12px;
+    }
+    .adres{
+        width: 200px;
+        font-size: 10px;
+    }
+    .moskov{
+        width: 350px;
+    }
+ }
+
+
+   @media(max-width:480px){
+    form{
+        width: 90%;
+    }
+    label{
+        width: 40%;
+        display: flex;
+        gap: 5px;
+    }
+    .adres{
+        width:  70%;
+        font-size: 8px;
+    }
+    .tugmacha{
+        width: 120px;
+        height: 38px;
+        font-size: 10px;
+    }
+    #input{
+        font-size: 8px;
+    }
  }

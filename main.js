@@ -21,7 +21,6 @@ let napitaData = [
 function rendernapitaData(dataList) {
      ichimlik.innerHTML = dataList.map(cat => `
         <button class="button" style="
-            background: ${cat.color};
             border: none;
             color:  red; 
             width: 100px;
@@ -31,6 +30,7 @@ function rendernapitaData(dataList) {
             margin: 5px;
             border-radius: 6px;
             cursor: pointer;
+              transition: all 0.6s ease-in-out;
             display: inline-flex;
             align-items: center;
             gap: 15px;
@@ -57,72 +57,58 @@ searchInput.addEventListener("input", function(e) {
 
 
 
+const cart = {};
 
-let quantities = {};
-let basePrices = {};
-
-// 3 dan 26 gacha hammasini 1 qilib boshlaymiz
-for (let i = 3; i <= 26; i++) {
-  quantities[i] = 1;
+function getQty(id) {
+  const el = document.getElementById(`qty-${id}`);
+  return parseInt(el.innerText);
 }
 
-basePrices = {
-  3: 399,
-  4: 549,
-  5: 249,
-  6: 630,
-  7: 630,
-  8: 249,
-  9: 399,
-  10: 549,
-
-  11: 475,
-  12: 395,
-  13: 249,
-  14: 630,
-  15: 630,
-  16: 249,
-  17: 475,
-  18: 395,
-
-  19: 475,
-  20: 395,
-  21: 425,
-  22: 630,
-  23: 630,
-  24: 425,
-  25: 425,
-  26: 630
-};
-
-function updateUI(index) {
-  let qty = document.getElementById("qty-" + index);
-  let price = document.getElementById("price-" + index);
-
-  if (!qty || !price) return;
-
-  qty.innerText = quantities[index].toString().padStart(2, "0");
-
-  price.innerText = basePrices[index] * quantities[index] + " ₽";
+function setQty(id, value) {
+  const el = document.getElementById(`qty-${id}`);
+  el.innerText = value < 10 ? "0" + value : value;
 }
 
-function increment(index) {
-  quantities[index]++;
-  updateUI(index);
+function increment(id) {
+  let qty = getQty(id);
+  qty++;
+  setQty(id, qty);
+  updatePrice(id, qty);
 }
 
-function decrement(index) {
-  if (quantities[index] > 1) {
-    quantities[index]--;
-    updateUI(index);
+function decrement(id) {
+  let qty = getQty(id);
+  if (qty > 1) {
+    qty--;
+    setQty(id, qty);
+    updatePrice(id, qty);
   }
 }
 
-function addToCart(index) {
-  alert(
-    quantities[index] +
-    " dona | " +
-    (quantities[index] * basePrices[index]) +
-    " ₽"
-  );
+function updatePrice(id, qty) {
+  const priceEl = document.getElementById(`price-${id}`);
+
+  // original price (DOM dan o‘qiymiz)
+  let text = priceEl.getAttribute("data-base");
+
+  if (!text) {
+    text = priceEl.innerText;
+    priceEl.setAttribute("data-base", text);
+  }
+
+  // faqat raqamni olamiz
+  let base = parseInt(text.replace(/[^\d]/g, ""));
+
+  if (isNaN(base)) return;
+
+  let total = base * qty;
+
+  priceEl.innerText = total + " ₽";
+}
+
+function addToCart(id) {
+  let qty = getQty(id);
+  cart[id] = qty;
+  alert("Savatchaga qo‘shildi: ID " + id + " - " + qty + " ta");
+  console.log(cart);
 }
