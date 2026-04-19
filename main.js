@@ -91,3 +91,74 @@ function addToCart(index) {
 }
 
 
+
+
+
+let quantities = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+
+let basePrices = [399, 399, 399, 399, 399, 399, 399, 399, 399, 399];
+
+function updateUI(index) {
+  let qtyElement = document.getElementById("qty-" + index);
+  let priceElement = document.getElementById("price-" + index);
+
+  if (qtyElement && priceElement) {
+    qtyElement.innerText = quantities[index];
+
+    let total = quantities[index] * basePrices[index];
+
+    priceElement.innerText = "от " + total + " ₽";
+  }
+}
+
+function increment(index) {
+  quantities[index]++;
+  updateUI(index);
+}
+
+function decrement(index) {
+  if (quantities[index] > 1) {
+    quantities[index]--;
+    updateUI(index);
+  }
+}
+
+function addToCart(index) {
+  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona, narxi: " 
+        + (quantities[index] * basePrices[index]) + " ₽");
+}
+
+
+let quantities = [1, 1];
+
+let basePrices = [399, 399, 399, 399, 399, 399, 399, 399, 399, 399];
+
+function updateUI(index) {
+  let qtyElement = document.getElementById("qty-" + index);
+  let priceElement = document.getElementById("price-" + index);
+
+  if (qtyElement && priceElement) {
+    qtyElement.innerText = quantities[index];
+
+    let total = quantities[index] * basePrices[index];
+
+    priceElement.innerText = "от " + total + " ₽";
+  }
+}
+
+function increment(index) {
+  quantities[index]++;
+  updateUI(index);
+}
+
+function decrement(index) {
+  if (quantities[index] > 1) {
+    quantities[index]--;
+    updateUI(index);
+  }
+}
+
+function addToCart(index) {
+  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona, narxi: " 
+        + (quantities[index] * basePrices[index]) + " ₽");
+}
