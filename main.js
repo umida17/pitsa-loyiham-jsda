@@ -53,62 +53,30 @@ searchInput.addEventListener("input", function(e) {
     renderData(filterData); 
 });
 
+let quantities = [];
 
+// har bir mahsulot narxi
+let basePrices = {
+  3: 399,
+  4: 549
+};
 
-
-let quantities = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-
-let basePrices = [399, 399, 399, 399, 399, 399, 399, 399, 399, 399];
-
-function updateUI(index) {
-  let qtyElement = document.getElementById("qty-" + index);
-  let priceElement = document.getElementById("price-" + index);
-
-  if (qtyElement && priceElement) {
-    qtyElement.innerText = quantities[index];
-
-    let total = quantities[index] * basePrices[index];
-
-    priceElement.innerText = "от " + total + " ₽";
-  }
-}
-
-function increment(index) {
-  quantities[index]++;
-  updateUI(index);
-}
-
-function decrement(index) {
-  if (quantities[index] > 1) {
-    quantities[index]--;
-    updateUI(index);
-  }
-}
-
-function addToCart(index) {
-  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona, narxi: " 
-        + (quantities[index] * basePrices[index]) + " ₽");
-}
-
-
-
-
-
-let quantities = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-
-let basePrices = [399, 399, 399, 399, 399, 399, 399, 399, 399, 399];
+// boshlang‘ich quantity
+quantities[3] = 1;
+quantities[4] = 1;
 
 function updateUI(index) {
   let qtyElement = document.getElementById("qty-" + index);
   let priceElement = document.getElementById("price-" + index);
 
-  if (qtyElement && priceElement) {
-    qtyElement.innerText = quantities[index];
+  if (!qtyElement || !priceElement) return;
 
-    let total = quantities[index] * basePrices[index];
+  // qty
+  qtyElement.innerText = quantities[index].toString().padStart(2, '0');
 
-    priceElement.innerText = "от " + total + " ₽";
-  }
+  // price
+  let total = quantities[index] * basePrices[index];
+  priceElement.innerText = "от " + total + " ₽";
 }
 
 function increment(index) {
@@ -124,23 +92,11 @@ function decrement(index) {
 }
 
 function addToCart(index) {
-  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona, narxi: " 
-        + (quantities[index] * basePrices[index]) + " ₽");
-}
-
-function increment(index) {
-  quantities[index]++;
-  updateUI(index);
-}
-
-function decrement(index) {
-  if (quantities[index] > 1) {
-    quantities[index]--;
-    updateUI(index);
-  }
-}
-
-function addToCart(index) {
-  alert("Mahsulot savatga qo‘shildi: " + quantities[index] + " dona, narxi: " 
-        + (quantities[index] * basePrices[index]) + " ₽");
+  alert(
+    "Mahsulot: " +
+    quantities[index] +
+    " dona | Narxi: " +
+    (quantities[index] * basePrices[index]) +
+    " ₽"
+  );
 }
