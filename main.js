@@ -3,7 +3,8 @@ let container = document.getElementById("container")
 let searchInput =document.getElementById("input")
 let menyu = document.getElementById("Чикен Сладкий Чили")
 let sushi = document.getElementById("Филадельфия кранч")
-
+let menyular = document.getElementById("zakuska")
+let desert = document.getElementById("disert")
 
 let napitaData = [
     {id: 1, img: "./img2/Fire.png", name: "Акции"},
@@ -45,14 +46,21 @@ rendernapitaData(napitaData);
 
 
 
-searchInput.addEventListener("input", function(e) {
-    let malumotlar= e.target.value.toLowerCase();
+const input = document.getElementById("input");
+const products = document.querySelectorAll(".card");
 
-    const filterData = datas.filter(user => 
-        user.name.toLowerCase().includes(malumotlar)
-    );
+input.addEventListener("input", function () {
+    const value = this.value.toLowerCase().trim();
 
-    renderData(filterData); 
+    products.forEach(item => {
+        const name = item.getAttribute("data-name").toLowerCase();
+
+        if (name.includes(value)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
 });
 
 
@@ -88,16 +96,14 @@ function decrement(id) {
 function updatePrice(id, qty) {
   const priceEl = document.getElementById(`price-${id}`);
 
-  // original price (DOM dan o‘qiymiz)
-  let text = priceEl.getAttribute("data-base");
+   let text = priceEl.getAttribute("data-base");
 
   if (!text) {
     text = priceEl.innerText;
     priceEl.setAttribute("data-base", text);
   }
 
-  // faqat raqamni olamiz
-  let base = parseInt(text.replace(/[^\d]/g, ""));
+   let base = parseInt(text.replace(/[^\d]/g, ""));
 
   if (isNaN(base)) return;
 
@@ -112,3 +118,7 @@ function addToCart(id) {
   alert("Savatchaga qo‘shildi: ID " + id + " - " + qty + " ta");
   console.log(cart);
 }
+
+
+
+
