@@ -231,3 +231,34 @@ text-align: right;
     border: 1px solid #FF7010;
     background: white;
  }
+
+
+ .sushi{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    color: #191919;
+}
+
+
+.sushi-rolli{
+    width: 260px;
+    height: 405px;
+    border: 2px solid #F0F0F0;
+    border-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 3px 3px 3px 3px rgb(198, 197, 197);
+     transition: all 0.6 ease-in-out;
+
+}
+.sushi-rolli:hover{
+    transform: translateY(-20px);
+}
+
+
+.roli{
+    width: 220px;
+    padding-left: 20px;
+    padding-top: 4px;
+ }
