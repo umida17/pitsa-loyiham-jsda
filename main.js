@@ -2,6 +2,8 @@ let  ichimlik =document.getElementById("napitaData");
 let container = document.getElementById("container")
 let searchInput =document.getElementById("input")
 let menyu = document.getElementById("Чикен Сладкий Чили")
+let sushi = document.getElementById("Филадельфия кранч")
+
 
 let napitaData = [
     {id: 1, img: "./img2/Fire.png", name: "Акции"},
@@ -57,8 +59,15 @@ searchInput.addEventListener("input", function(e) {
 
 
 let quantities = {};
+let basePrices = {};
 
-let basePrices = {
+// barcha productlarni 1 qilib boshlash
+for (let i = 3; i <= 18; i++) {
+  quantities[i] = 1;
+}
+
+// narxlarni bir joyga jamlaymiz
+basePrices = {
   3: 399,
   4: 549,
   5: 249,
@@ -66,12 +75,16 @@ let basePrices = {
   7: 630,
   8: 249,
   9: 399,
-  10: 549
+  10: 549,
+  11: 475,
+  12: 395,
+  13: 249,
+  14: 630,
+  15: 630,
+  16: 249,
+  17: 475,
+  18: 395
 };
-
-for (let i = 3; i <= 10; i++) {
-  quantities[i] = 1;
-}
 
 function updateUI(index) {
   let qty = document.getElementById("qty-" + index);
@@ -81,8 +94,7 @@ function updateUI(index) {
 
   qty.innerText = quantities[index].toString().padStart(2, "0");
 
-  price.innerText =
-    "от " + (quantities[index] * basePrices[index]) + " ₽";
+  price.innerText = basePrices[index] * quantities[index] + " ₽";
 }
 
 function increment(index) {
