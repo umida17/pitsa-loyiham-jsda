@@ -63,12 +63,22 @@ let quantities = {
   6: 1
 };
 
+let quantities = {};
+
 let basePrices = {
   3: 399,
   4: 549,
   5: 249,
-  6: 630
+  6: 630,
+  7: 630,
+  8: 249,
+  9: 399,
+  10: 549
 };
+
+for (let i = 3; i <= 10; i++) {
+  quantities[i] = 1;
+}
 
 function updateUI(index) {
   let qty = document.getElementById("qty-" + index);
