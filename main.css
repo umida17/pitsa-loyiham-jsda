@@ -122,7 +122,12 @@ label{
     border: 2px solid #F0F0F0;
     border-radius: 10px;
     padding-top: 10px;
+    box-shadow: 3px 3px 3px 3px rgb(198, 197, 197);
+     transition: all 0.6 ease-in-out;
 
+}
+.card:hover{
+    transform: translateY(-20px);
 }
 
 .menyular{
@@ -130,7 +135,7 @@ label{
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
-    box-shadow: 3px 3px 3px 3px white;
+     
 }
 
 .new{
