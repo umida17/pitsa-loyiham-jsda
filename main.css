@@ -44,11 +44,13 @@ header .container{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 .cards{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 50px;
     margin-bottom: 40px;
@@ -280,4 +282,22 @@ text-align: right;
  .friy{
        width: 100%;
     margin-top: -30px;
+ }
+
+
+ .asartiy{
+    width: 260px;
+    height: 405px;
+    border: 2px solid #F0F0F0;
+    border-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 3px 3px 3px 3px rgb(198, 197, 197);
+     transition: all 0.6 ease-in-out;
+
+}
+
+
+.friy2{
+    width: 100%;
+    margin-top: -10px;
  }
