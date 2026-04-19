@@ -15,7 +15,7 @@ header{
     box-shadow: 10px 10px 10px rgb(222, 222, 220);
     background: rgb(237, 236, 236);
     z-index: 999999;
-    height: 70px;    
+    height: 90px;    
   text-align: center; 
 }
 
@@ -295,9 +295,18 @@ text-align: right;
      transition: all 0.6 ease-in-out;
 
 }
+.asartiy:hover{
+    transform: translateY(-20px);
+}
 
 
 .friy2{
     width: 100%;
     margin-top: -10px;
+ }
+
+ .friy1{
+       width: 92%;
+    margin-top: 8px;
+    padding-left: 20px;
  }

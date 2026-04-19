@@ -61,12 +61,11 @@ searchInput.addEventListener("input", function(e) {
 let quantities = {};
 let basePrices = {};
 
-// barcha productlarni 1 qilib boshlash
-for (let i = 3; i <= 18; i++) {
+// 3 dan 26 gacha hammasini 1 qilib boshlaymiz
+for (let i = 3; i <= 26; i++) {
   quantities[i] = 1;
 }
 
-// narxlarni bir joyga jamlaymiz
 basePrices = {
   3: 399,
   4: 549,
@@ -76,6 +75,7 @@ basePrices = {
   8: 249,
   9: 399,
   10: 549,
+
   11: 475,
   12: 395,
   13: 249,
@@ -83,7 +83,16 @@ basePrices = {
   15: 630,
   16: 249,
   17: 475,
-  18: 395
+  18: 395,
+
+  19: 475,
+  20: 395,
+  21: 425,
+  22: 630,
+  23: 630,
+  24: 425,
+  25: 425,
+  26: 630
 };
 
 function updateUI(index) {
