@@ -130,6 +130,7 @@ label{
     align-items: center;
     gap: 30px;
     margin-bottom: 40px;
+    box-shadow: 3px 3px 3px 3px white;
 }
 
 .new{
