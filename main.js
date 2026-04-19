@@ -56,13 +56,6 @@ searchInput.addEventListener("input", function(e) {
 
 
 
-let quantities = {
-  3: 1,
-  4: 1,
-  5: 1,
-  6: 1
-};
-
 let quantities = {};
 
 let basePrices = {
